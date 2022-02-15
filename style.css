@@ -1,0 +1,906 @@
+
+:root {
+    font-family: 'Roboto', sans-serif;
+    --blue-col: rgb(48, 142, 185);
+    --border-pastel: rgb(163,184,206);
+    --border-pastel-dark: rgb(97, 112, 128);
+    --marin-blue: #0067a8;
+    --marin-blue-og: rgb(103, 168, 186);
+}
+
+*, *::before, *::after {box-sizing: border box}
+
+* {scroll-behavior: smooth;}
+
+html {min-width: 300px;}
+
+.br {border: 1px solid black;}
+
+/* ZAR header.......................... */
+
+header {
+    text-align: center;
+}
+
+.zar-container, .hamburger-menu-cont {
+    display: inline-block;
+}
+
+.hamburger-menu-cont {display: none;}
+
+.material-icons.ham-menu { 
+    color: black;
+    font-size: 48px;
+    vertical-align: middle;
+}
+
+.zar-logo, .zar-divider, .zar-description {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.zar-logo {
+    font-family: 'Bakbak One', cursive;
+    font-size: 3.4rem;
+
+}
+
+.zar-description, ul.main-nav {
+    font-family: 'Abel', sans-serif;
+}
+
+.zar-divider {
+    margin: .5rem;
+}
+
+.grad-logo {
+    /* background: #992877;
+    background: -webkit-linear-gradient(to right, #992877 24%, #008080 50%, #413480 100%);
+    background: -moz-linear-gradient(to right, #992877 24%, #008080 50%, #413480 100%);
+    background: linear-gradient(to right, #992877 24%, #008080 50%, #413480 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+/* main navigation....................... */
+
+.main-nav a, .main-nav a:focus {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+ul.main-nav {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.main-nav > * {
+    display: inline-block;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: .5em 1em;
+}
+
+/* hamburger toggle */
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 100ms ease-in-out 80ms;
+}
+
+.nav-toggle {display: none;}
+
+
+/* MAIN PAGE.............................. */
+
+/* article : shared parts................. */
+
+
+.bold-ft {font-weight: bold;}
+.blue-col {color: var(--marin-blue)}
+
+.promo-quality p, .promo-offer-head p, .gallery-head p, .promo-focus p, .team-head p, .promo-reliability p  {
+    margin: 0;
+}
+
+.promo-quality, .promo-offer-head, .promo-reliability, .gallery-head, .promo-focus, .team-head {
+    text-align: center;
+    border-radius: 15px;
+    font-size: 1.6rem;
+    background-color: rgba(255, 255, 255, 0.836);
+    border: 3px solid var(--marin-blue);
+    padding: .5em 1em;
+}
+
+.promo-quality, .promo-focus, .promo-reliability {
+    padding: 1em;
+}
+
+.promo-offer-head, .gallery-head, .team-head {
+    font-size: 2rem;
+    box-shadow: 1px 1px 30px rgba(35, 68, 139, 0.267);
+}
+
+.promo-quality, .promo-focus {
+    font-size: 2.5rem;
+}
+
+.flex-offer, .flex-focus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+}
+
+/* article: [quality]....................... */
+
+.promo-quality-cont {
+    height: 35rem;
+    background-image: url(img/3paints.jpg);
+    background-size: cover;
+    text-align: right;
+}
+
+.promo-quality {
+    display: inline-block;
+    max-width: 30rem;
+    background-color: rgba(255, 255, 255, 0.795);
+    border: unset;
+    text-align: right;
+    margin-top: 5.5rem;
+
+}
+
+.grad {
+    background: #5E0D2B;
+    background: -webkit-linear-gradient(to right, #5E0D2B 0%, #000000 100%);
+    background: -moz-linear-gradient(to right, #5E0D2B 0%, #000000 100%);
+    background: linear-gradient(to right, #5E0D2B 0%, #000000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* article: [offer]........................ */
+
+.promo-offer-cont {
+    position: relative;
+    height: 35rem;
+    border: var(--border-pastel) 2rem solid;
+    background-image: url(img/wall.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.flex-offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+}
+
+
+.promo-offer-head {
+    /* position: absolute;
+    top: 5.6rem;
+    left: 3.4rem; */
+    margin-top: 1rem;
+    max-width: 23rem;
+}
+
+.promo-offer-menu {
+    /* position: absolute;
+    top: 10rem;
+    left: 5rem; */
+    text-align: center;
+    margin: 1rem 1.6rem;
+}
+
+.menu-item {
+    max-width: 20rem;
+    padding: .7em;
+    margin: .5rem;
+    font-size: 1.6rem;
+    background-color: var(--marin-blue);
+    color: white;
+}
+
+/* article: [gallery]...................... */
+
+.photo-gal-cont {
+    background-color: var(--border-pastel);
+    text-align: center;
+    height: 43rem;
+}
+
+.gallery-head-cont {
+    padding-top: 3rem;
+    height: 7rem;
+}
+
+.gallery-head {
+    border-color: rgb(96, 131, 148);
+}
+
+.flex-photo-cont, .flex-photo-cont-630 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+    padding: 1.5em;
+    /* background-color: var(--border-pastel-dark); */
+}
+
+.flex-photo-cont-630 {display: none;}
+
+.back-pattern {
+    background-color: #A3B8CE;
+    opacity: 0.8;
+    background-size: 5px 5px;
+    background-image: repeating-linear-gradient(45deg, #48525d 0, #48525d 0.5px, #A3B8CE 0, #A3B8CE 50%);
+}
+
+/* .divider-line {
+    border-top: black 1px solid;
+    margin: 0 auto;
+} */
+
+.photos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.photo-slider {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 30rem;
+    box-shadow: 1px 1px 60px rgba(69, 90, 109, 0.438);
+}
+
+.photos-control {
+    position: relative;
+    padding: 2em;
+    text-align: center;
+}
+
+button.arrow-left, button.arrow-right, button.arrow-right-630, button.arrow-left-630 {
+    /* position: absolute;
+    top: -17rem; */
+    border: none;
+    background: none;
+    z-index: 1;
+    cursor: pointer;
+}
+
+button.arrow-right-630, button.arrow-left-630 {
+    display: none;
+}
+
+button.arrow-left {
+    padding-left: 1rem;
+}
+
+.gallery-head {
+    display: inline-block;
+    padding: .5em 1em;
+    margin: 1em;
+}
+
+.material-icons.text-center {text-align: center;}
+
+/* article: [focus].......................... */
+
+.promo-focus-cont {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    height: 35rem;
+    background-image: url(img/wall22.png);
+    background-size: cover;
+}
+
+.promo-focus {
+    width: 70%;
+    max-width: 30rem;
+    color: white;
+    background-color: unset;
+    border-color:  var(--marin-blue-og);
+    margin-bottom: 6rem;
+}
+
+.grad-focus {text-shadow: 1px 1px 5px rgb(35, 76, 110);}
+
+.focus-txt-col {color: rgb(178, 240, 240);}
+
+
+/* article: [team]................................ */
+
+/* > 430 */
+
+.team-head {
+    display: inline-block;
+    margin: 1em;
+    margin-bottom: 2.5em;
+}
+
+.team-cont {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.team {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+}
+
+.zar-person {
+    display: flex;
+    column-gap: .5em;
+    flex-direction: column;
+    width: 25%;
+    margin: 1em;
+}
+
+.zar-position {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    height: 3rem;
+}
+
+.zar-photo { 
+    max-width: 125px;
+    min-width: 100px;
+    border-radius: 15px;
+}
+
+.zar-person h3, .zar-person h4, .zar-person p {
+    margin: .2em;
+    padding: .2em;
+}
+
+.zar-p-description {
+    text-align: justify;
+}
+
+/* < 430 */
+
+.team-630 {display: none;}
+
+.person-630 {
+    display: flex;
+    margin: 3em;
+    margin-right: 1em;
+}
+
+.person-description-630-cont {
+    margin: 1em;
+    text-align: left;
+    padding-left: 1em;
+}
+
+.zar-name-630, .zar-position-630 {
+    margin: .5rem;
+}
+
+/* article: [ralialabiity]................... */
+
+.promo-reliability-cont {
+    position: relative;
+    border: rgb(150,203,193) 1.5rem solid;
+    width: 80%;
+    height: 25rem;
+    margin: 0 auto;
+    background-image: url(img/rla.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.promo-reliability {
+    display: flex;
+    align-items: center;
+    bottom: -3.5em;
+    width: 50%;
+    max-width: 40rem;
+    min-height: 6rem;
+    z-index: 1;
+    border-color:rgb(150,203,193);
+    font-size: 2rem;
+}
+
+.smuga {
+    width: 50%;
+    max-width: 30rem;
+    bottom: -10em;
+}
+
+.promo-reliability, .smuga {
+    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+}
+
+/* article: [contact]................... */
+
+.contact-cont {
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.contact-cont p {
+    color: coral;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: .7em;
+    margin-bottom: 1em;
+}
+
+.contact-item-container {
+    background-color: coral;
+    border-radius: 15px;
+    width: 70%;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.contact-item-container p {
+    display: flow-root;
+    font-size: 1.1rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(146, 59, 19);
+    padding-top: 1em;
+
+    margin: 0;
+}
+
+.contact-item-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: rgb(146, 59, 19);
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    font-weight: bold;
+    width: 30%;
+}
+
+.material-icons.md-60 {font-size: 60px;}
+
+
+.material-icons {
+    color: white;
+}
+
+.my-builder-logo-cont {
+    margin: 1em;
+    padding-bottom: 1em;
+}
+
+.my-builder-logo {width: 160px;}
+
+/* footer.......................... */
+
+footer {
+    color: rgb(218, 218, 218);
+    margin: 2em;
+    text-align: center;
+}
+
+/* pull back nav.................... */
+
+.pull-back {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: inline-block;
+    background-color: var(--marin-blue);
+    padding: .1em;
+    border: white 1px solid;
+    border-radius: 5px;
+    z-index: 5;
+    box-shadow: 1px 1px 10px rgb(138, 138, 138);
+}
+
+
+/* media Q................ */
+
+/* 1500 */
+
+@media only screen and (max-width: 1500px) {
+    .promo-quality, .promo-focus {
+        font-size: 2.2rem;
+    }
+
+    .promo-reliability {font-size: 2rem;}
+
+    .promo-offer-head, .gallery-head, .team-head {
+        font-size: 1.8rem;
+    }
+
+    .menu-item {
+        font-size: 1.4rem;
+    }
+
+    .team {font-size: 1.1rem;}
+}
+
+/* 1220 */
+
+@media only screen and (max-width: 1220px) {
+    .smuga {width: 60%;}
+}
+
+/* 1065 */
+
+@media only screen and (max-width: 1065px) {
+    .promo-quality, .promo-focus {
+        font-size: 2rem;
+    }
+
+    .promo-quality {margin-top: 9rem;}
+
+    .promo-reliability {font-size: 1.8rem;}
+
+    .promo-offer-head, .gallery-head, .team-head {
+        font-size: 1.6rem;
+    }
+
+    .menu-item {
+        font-size: 1.2rem;
+    }
+
+    .team {font-size: 1rem;}
+
+    .smuga {width: 80%;}
+}
+
+/* 960 */
+
+@media only screen and (max-width: 960px) {
+    .promo-reliability {
+        width: 60%;
+    }
+
+    .flex-focus {width: 70%;}
+
+    .promo-quality, .promo-focus {
+        font-size: 1.8rem;
+    }
+}
+
+/* 830 */
+
+@media only screen and (max-width: 830px) {
+
+    .promo-focus {
+        padding-left: .5em;
+        padding-right: .5em; 
+    }
+
+    .flex-focus {
+        align-items: flex-end;
+        margin-right: 1rem;
+    }
+
+    .promo-reliability {
+        width: 65%;
+    }
+}
+
+/* 700 */
+
+@media only screen and (max-width: 700px) {
+
+    .promo-quality-cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .promo-quality {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.6rem;
+        max-width: unset;
+        width: 50%;
+        height: 40%;
+        margin: 0;
+    }
+
+    .promo-offer-menu, .promo-offer-head, .menu-item {
+        margin: 0 auto;
+        position: static;
+    }
+
+    .menu-item {
+        margin-top: .5em;
+    }
+
+    .promo-offer-head {
+        margin-top: 6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .flex-offer {
+        width: 100%;
+    }
+
+    .promo-offer-head {
+        margin-top: 1rem;
+    }
+
+    .flex-focus {
+        width: 100%;
+        align-items: center;
+    }
+
+    .promo-focus-cont {
+        background-image: url(img/wall3.png);
+    }
+
+    .promo-focus {
+        width: 60%;
+    }
+
+    .zar-person {
+        margin: .5em;
+        width: unset;
+    }
+
+    .team {
+        justify-content: center;
+        margin: 0 2rem;
+    }
+
+    .contact-item {width: 50%;}
+
+}
+
+/* 630 */
+
+@media only screen and (max-width: 630px) {
+
+    .team {display: none;}
+    .team-630 {display: block;}
+
+    .promo-quality, .promo-focus {width: 80%;}
+
+    .photos {width: 100%;}
+    .arrow-right, .arrow-left {display: none;}
+
+    .flex-photo-cont {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    button.arrow-right-630, button.arrow-left-630 {
+        display: block;
+        position: absolute;
+    }
+
+    button.arrow-right-630 {right: 0;}
+    button.arrow-left-630 {
+        padding-left: 1rem;
+        left: 0;
+    }
+
+    .material-icons.mi-shad {
+        text-shadow: 1px 1px 10px rgb(83, 83, 83);
+    }
+
+    .flex-focus {margin-right: 0;}
+
+    .promo-reliability {
+        font-size: 1.6rem;
+    }
+
+    .mq-fix {display: block;}
+
+    .contact-item-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        padding: .8rem;
+        width: 80%;
+    }
+
+    .my-builder-logo {width: 130px;}
+}
+
+/* 500 */
+
+@media only screen and (max-width: 500px) {
+
+    .team {display: block;}
+    .team-630 {display: none;}
+
+    .zar-person {
+        margin-bottom: 3rem;
+    }
+
+    .zar-p-description {
+        width: 70%;
+        align-self: center;
+    }
+
+    .promo-offer-head, .gallery-head, .team-head {
+        font-size: 1.4rem;
+    }
+
+    .menu-item {font-size: 1.1rem;}
+
+    .promo-quality, .promo-focus {
+        font-size: 1.5rem;
+    }
+
+}
+
+/* 450 */
+
+@media only screen and (max-width: 450px) {
+
+    .hamburger-menu-cont {
+        display: inline-block;
+    }
+
+    .main-nav-cont {
+        position: absolute;
+        text-align: right;
+        right: 0;
+        width: 100%;
+        background: rgb(255,255,255);
+        background: linear-gradient(21deg, rgba(255,255,255,0) 34%, rgba(0,103,168,1) 100%, rgba(243,243,243,1) 243%);
+        margin-right: .5em;
+        margin-left: .5em;
+
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 100ms ease-in-out;
+    }
+
+    label.hamburger-menu-cont {
+        cursor: pointer;
+    }
+
+    .main-nav li {
+        display: block;
+        padding: .25em;
+        padding-right: 1em;
+    }
+
+    .main-nav a {
+        color: rgb(205, 210, 219);
+        text-shadow: 1px 1px 4px black;
+        opacity: 0;
+    }
+
+    .main-nav a:focus {
+        color: rgb(205, 210, 219);
+    }
+
+    #zar {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+    }
+
+    .zar-container {
+        padding-left: .5em;
+        justify-self: left;
+    }
+
+    .hamburger-menu-cont {
+        padding-right: .5em;
+        justify-self: right;
+    }
+}
+
+/* 430 */
+
+@media only screen and (max-width: 430px) {
+    .promo-offer-cont {
+        border: var(--border-pastel) 1rem solid;}
+}
+
+/* 400 */
+
+@media only screen and (max-width: 400px) {
+
+    .zar-p-description {
+        width: 100%;
+    }
+
+    .promo-offer-head, .menu-item {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+}
+
+/* 370 */
+
+@media only screen and (max-width: 370px) {
+
+    .zar-description {
+        font-size: 0.9rem;
+    }
+
+    .zar-divider {margin: .3rem;}
+
+    .zar-logo {font-size: 2.9rem;}
+
+    .material-icons.ham-menu { 
+        font-size: 36px;
+    }
+
+    .promo-quality, .promo-focus {
+        font-size: 1.3rem;
+    }
+
+    .promo-reliability {
+        font-size: 1.4rem;
+    }
+
+    p.contact-look-forward {
+        font-size: 1.7rem;
+    }
+
+    .contact-item-container p {
+        font-size: .9rem;
+    }
+
+    .contact-item-flex {
+        font-size: 1.4rem;
+    }
+}
+
+/* 330 */
+
+@media only screen and (max-width: 330px) {
+    .team {
+        margin: 1rem;
+    }
+}
