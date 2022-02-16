@@ -5,7 +5,7 @@
 
 ## about
 
-Simple responsive website for a family painting and decorating company, made with flexbox.
+Simple responsive website for a family painting and decorating company 🎨 made with flexbox.
 
 ## features
 
