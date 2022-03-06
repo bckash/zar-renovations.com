@@ -8,19 +8,22 @@
     <meta property="og:description" content="Quality services in Painting and Decorating, offered by a family company based in West Yorkshire">
     <meta property="og:title" content="ZAR | Family Painting
     & Decorating">
+    <title>ZAR Renovations</title>
     <link rel="shortcut icon" href="img/roller.png" type="image/x-icon"/>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
-    <title>ZAR Renovations</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Abel&family=Bakbak+One&family=Roboto:wght@400;900&display=swap');
-    </style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,900;1,900&display=swap');
+
+</style>
 
 <body>
-    <!-- ZAR header..................... -->
+    <!-- ZAR HEADER..................... -->
     <header id="zar">
         <section class="zar-container">
             <div class="zar-logo grad-logo">ZAR</div>
@@ -29,15 +32,16 @@
                 Family Painting <br>& Decorating
             </div>
         </section>
+        <!-- toggle -->
         <label for="nav-toggle" class="hamburger-menu-cont">
             <span class="material-icons ham-menu">
                 menu
             </span>  
         </label>
-
     </header>
 
-    <!-- main navigation................. -->
+    <!-- MAIN NAV................. -->
+
     <input id="nav-toggle" type="checkbox" class="nav-toggle">
     <nav class="main-nav-cont">
         <ul class="main-nav">
@@ -48,60 +52,67 @@
         </ul>
     </nav>
 
-    <!-- main page....................... -->
+    <!-- MAIN PAGE....................... -->
     <main>
-        <!-- quality -->
-        <article class="promo-quality-cont">
-            <section class="promo-quality">
-                <p class="grad">
+        <!-- we are a small company -->
+        <section class="promo-quality-cont">
+            <div class="promo-quality">
+                <p class="grad2">
                     <span class="bold-ft">We are a small family Painting and Decorating company based in West Yorkshire,</span> that takes pride in delivering <span class="blue-col">quality work </span> to our customers.
                 </p>
-            </section>
-        </article>
+            </div>
+        </section>
 
-        <!-- offer -->
-        <article id="offer" class="promo-offer-cont">
-                <section class="flex-offer">
-                    <section class="promo-offer-head">
-                        <p class=""><span class="bold-ft">Our Team Specializes in:</span></p>
-                    </section>
-                    <section class="promo-offer-menu">
+        <!-- specializes in -->
+        <section id="offer" class="promo-offer-cont">
+                <div class="flex-offer">
+                    <div class="promo-offer-head ">
+                        <p class="grad3"><span class="bold-ft">Our Team Specializes in:</span></p>
+                    </div>
+                    <div class="promo-offer-menu">
                         <div class="menu-item">Painting & Decorating</div>
                         <div class="menu-item">Wallpapering</div>
                         <div class="menu-item">Installing Laminate Flooring</div>
                         <div class="menu-item">Minor DIY</div>
                         <div class="menu-item">Kitchen installing 
                         </div>
-                    </section>
-                </section>          
-        </article>
+                    </div>
+                </div>          
+        </section>
 
         <!-- photo galery -->
-        <article id="photo" class="photo-gal-cont">
+        <section id="photo" class="photo-gal-cont ">
             <!-- head -->
-            <section class="gallery-head-cont">
-                <section class="gallery-head">
-                    <p><span class="bold-ft">Photo Gallery:</span></p>
-                </section>
-            </section>
-            <!-- <div class="divider-line"></div> -->
-            
+            <div id="gallery-head__cont">
+                <div class="gallery-head">
+                    <span id="gal-icon" class="material-icons">
+                        photo_camera
+                    </span>
+                </div>
+                <p class="gal-text">
+                PHOTO
+                </p>
+            </div>
+
             <section class="flex-photo-cont back-pattern">
                 <!-- arr -->
                 <button class="arrow-left" onclick="plusDivs(-1)">
                     <span class="material-icons md-60 text-center">
-                        arrow_back_ios
+                        arrow_back_ios_new
                     </span>
                 </button>
+
                 <!-- photo -->
                 <section class="photos">
+
                     <!-- arr [-630]-->
-                    <button class="arrow-left-630" onclick="plusDivs(-1)">
+                    <button class="arrow-left-630 br" onclick="plusDivs(-1)">
                         <span class="material-icons md-60 mi-shad text-center">
                             arrow_back_ios
                         </span>
                     </button>
-                    <div>
+
+                    <div class="photo-direct">
                         <img src="photo/1.jpg" alt="" class="photo-slider">
                         <img src="photo/2.jpg" alt="" class="photo-slider">
                         <img src="photo/3.jpg" alt="" class="photo-slider">
@@ -123,6 +134,7 @@
                         <img src="photo/19.jpg" alt="" class="photo-slider">
                         <img src="photo/20.jpg" alt="" class="photo-slider">
                     </div>
+
                     <!-- arr [-630] -->
                     <button class="arrow-right-630" onclick="plusDivs(1)">
                         <span class="material-icons md-60 mi-shad text-center">
@@ -130,6 +142,7 @@
                         </span>
                     </button>
                 </section>
+
                 <!-- arr -->
                 <button class="arrow-right" onclick="plusDivs(1)">
                     <span class="material-icons md-60 text-center">
@@ -137,24 +150,40 @@
                     </span>
                 </button>
             </section>
+
+            <div class="kidn-png-cont">
+                <img class="kidn-png" src="img/polka.png" alt="">
+            </div>
             
-        </article>
+        </section>
 
         <!-- focus -->
-        <article class="promo-focus-cont">
-            <section class="flex-focus">
-                <section class="promo-focus">
+        <section class="promo-focus-cont">
+            <div class="flex-focus">
+                <div class="promo-focus">
                     <p class="grad-focus"><span class="bold-ft">The main focus is on <span class="focus-txt-col"> professional</span>, <span class="focus-txt-col"> effiecent</span> and <span class="focus-txt-col">high standard</span> service -</span> our customers deserve.
                     </p>
-                </section>
-            </section>  
-        </article>
+                </div>
+            </div>  
+        </section>
+
+        <!-- gradient divider -->
+        <section class="divider"></section>
 
         <!-- team   -->
-        <article id="team" class="team-cont">
-            <section class="team-head">
-                <p><span class="bold-ft">Team</span></p>
-            </section>
+        <section id="team" class="team-cont">
+            <div id="team-head__cont">
+                <div class="team-head">
+                <span id="group-icon" class="material-icons">
+                    groups
+                </span>
+                <!-- <p><span class="bold-ft">Team</span></p> -->
+            </div>
+            <p class="team-text">
+                TEAM
+            </p>
+            </div>
+            
             <section class="team">
                 <!-- zuza -->
                 <section class="zar-person">
@@ -232,19 +261,19 @@
                     </div>
                 </section>
             </section>   
-        </article>
+        </section>
 
         <!-- reliability -->
-        <article class="promo-reliability-cont">
-            <section class="promo-reliability">
+        <section class="promo-reliability-cont">
+            <div class="promo-reliability">
                 <p class="grad"><span class="bold-ft">Reliability, trust and honesty is key to our service</span> — each project is taken seriously.
                 </p>
-            </section>
+            </div>
             <img class="smuga" src="img/smuga.png" alt="">
-        </article>
+        </section>
 
         <!-- contact -->
-        <article id="contact" class="contact-cont">
+        <section id="contact" class="contact-cont">
             <p class="contact-look-forward">We look forward <span class="mq-fix"></span> to working with you.
             </p>
             <section class="contact-item-container">
@@ -276,19 +305,16 @@
                     <img class="my-builder-logo" src="img/mb-logo.png" alt="">
                 </section>
 
-            </section>
-            
-            
-        </article>
-
+            </section>          
+        </section>
 
     </main>
 
     <!-- pull back menu.................... -->
-    <nav class="pull-back">
+    <nav id="pull-back" class="pull-back opa-0">
         <a href="#zar">
-            <span class="material-icons md-40">
-                arrow_drop_up
+            <span id="arrow-nav" class="material-icons">
+                arrow_circle_left
             </span>
         </a>
     </nav>
@@ -299,16 +325,17 @@
         </p>
     </footer>
 
-    <!-- JS slider..................... -->
+    <!-- JS ..................... -->
+    <script src="app.js"></script>
     <script>
-        var slideIndex = 1;
+        let slideIndex = 1;
         showDivs(slideIndex);   
 
         function plusDivs(n) {showDivs(slideIndex += n);}   
           
         function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("photo-slider");
+            let i;
+            let x = document.getElementsByClassName("photo-slider");
             if (n > x.length) {slideIndex = 1}
             if (n < 1) {slideIndex = x.length}
             for (i = 0; i < x.length; i++) { 

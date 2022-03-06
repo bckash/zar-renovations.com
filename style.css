@@ -3,9 +3,19 @@
     font-family: 'Roboto', sans-serif;
     --blue-col: rgb(48, 142, 185);
     --border-pastel: rgb(163,184,206);
-    --border-pastel-dark: rgb(97, 112, 128);
+    --border-pastel-dark: rgb(64, 99, 136);
     --marin-blue: #0067a8;
     --marin-blue-og: rgb(103, 168, 186);
+    --marin-blue-dark: rgb(34, 78, 90);
+    --grey-nav: rgb(112, 112, 112);
+    --green-nav: rgb(23, 124, 124);
+    --or-nav: rgb(124, 61, 19);
+    --team-grey: rgb(199, 199, 199);
+    --team-out: rgb(230, 230, 230);
+    --team-out2: rgb(230, 230, 230);
+    --photo-past : rgb(240, 240, 240);
+    --photo-txt: rgb(255, 255, 255);
+    --zar-logo-purp: rgb(153,40,119);
 }
 
 *, *::before, *::after {box-sizing: border box}
@@ -16,7 +26,11 @@ html {min-width: 300px;}
 
 .br {border: 1px solid black;}
 
+
+
 /* ZAR header.......................... */
+/* .................................... */
+
 
 header {
     text-align: center;
@@ -40,7 +54,7 @@ header {
 }
 
 .zar-logo {
-    font-family: 'Bakbak One', cursive;
+    font-family: 'Noto Serif Display', serif;
     font-size: 3.4rem;
 
 }
@@ -54,15 +68,17 @@ header {
 }
 
 .grad-logo {
-    /* background: #992877;
+    background: #992877;
     background: -webkit-linear-gradient(to right, #992877 24%, #008080 50%, #413480 100%);
     background: -moz-linear-gradient(to right, #992877 24%, #008080 50%, #413480 100%);
     background: linear-gradient(to right, #992877 24%, #008080 50%, #413480 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
 }
 
+
 /* main navigation....................... */
+
 
 .main-nav a, .main-nav a:focus {
     text-decoration: none;
@@ -88,7 +104,9 @@ ul.main-nav > * {
     padding: .5em 1em;
 }
 
+
 /* hamburger toggle */
+
 
 .nav-toggle:checked ~ nav {
     transform: scale(1, 1);
@@ -103,23 +121,30 @@ ul.main-nav > * {
 
 
 /* MAIN PAGE.............................. */
+/* ....................................... */
 
-/* article : shared parts................. */
+
+main {
+    overflow: hidden;
+}
+
+
+/* shared parts................. */
 
 
 .bold-ft {font-weight: bold;}
-.blue-col {color: var(--marin-blue)}
+.blue-col {color: var(--border-pastel-dark)}
 
 .promo-quality p, .promo-offer-head p, .gallery-head p, .promo-focus p, .team-head p, .promo-reliability p  {
     margin: 0;
 }
 
-.promo-quality, .promo-offer-head, .promo-reliability, .gallery-head, .promo-focus, .team-head {
+.promo-quality, .promo-offer-head, .promo-reliability, .promo-focus, .team-head {
     text-align: center;
     border-radius: 15px;
     font-size: 1.6rem;
     background-color: rgba(255, 255, 255, 0.836);
-    border: 3px solid var(--marin-blue);
+    border: 3px solid var(--border-pastel-dark);
     padding: .5em 1em;
 }
 
@@ -145,23 +170,26 @@ ul.main-nav > * {
     width: 60%;
 }
 
-/* article: [quality]....................... */
+
+/* [WE ARE AS SMALL COMPANY].............. */
+
 
 .promo-quality-cont {
     height: 35rem;
     background-image: url(img/3paints.jpg);
     background-size: cover;
     text-align: right;
+    margin-left: 2rem;
+    border-top-left-radius: 600px;
 }
 
 .promo-quality {
     display: inline-block;
     max-width: 30rem;
     background-color: rgba(255, 255, 255, 0.795);
-    border: unset;
+    border: 1px solid rgb(230, 230, 230);
     text-align: right;
     margin-top: 5.5rem;
-
 }
 
 .grad {
@@ -173,8 +201,27 @@ ul.main-nav > * {
     -webkit-text-fill-color: transparent;
 }
 
+.grad2 {
+    background: #741e5a;
+    background: -webkit-linear-gradient(to right, #741e5a 0%, #000000 100%);
+    background: -moz-linear-gradient(to right, #741e5a 0%, #000000 100%);
+    background: linear-gradient(to right, #741e5a 0%, #000000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-/* article: [offer]........................ */
+.grad3 {
+    background: rgb(41, 62, 85);
+    background: -webkit-linear-gradient(to right, rgb(41, 62, 85) 0%, #000000 100%);
+    background: -moz-linear-gradient(to right, rgb(41, 62, 85) 0%, #000000 100%);
+    background: linear-gradient(to right, rgb(41, 62, 85) 0%, #000000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* [SPECIALIZE IN].................. */
+
 
 .promo-offer-cont {
     position: relative;
@@ -196,19 +243,13 @@ ul.main-nav > * {
     width: 60%;
 }
 
-
 .promo-offer-head {
-    /* position: absolute;
-    top: 5.6rem;
-    left: 3.4rem; */
     margin-top: 1rem;
+    margin-bottom: 1rem;
     max-width: 23rem;
 }
 
 .promo-offer-menu {
-    /* position: absolute;
-    top: 10rem;
-    left: 5rem; */
     text-align: center;
     margin: 1rem 1.6rem;
 }
@@ -218,57 +259,89 @@ ul.main-nav > * {
     padding: .7em;
     margin: .5rem;
     font-size: 1.6rem;
-    background-color: var(--marin-blue);
+    background-color: var(--border-pastel-dark);
     color: white;
 }
 
-/* article: [gallery]...................... */
+
+/* [PHOTO]...................... */
+
 
 .photo-gal-cont {
-    background-color: var(--border-pastel);
     text-align: center;
-    height: 43rem;
+    height: 52rem;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+    background-color: var(--border-pastel);
 }
 
-.gallery-head-cont {
-    padding-top: 3rem;
+.gallery-head-cont, .flex-photo-cont, .flex-photo-cont-630 {
+    padding: 1.5em;
+}
+
+#gallery-head__cont, #team-head__cont {
+    position: relative;
+    z-index: 100;
+    display: inline-block;
+    border: 1px solid var(--photo-past);
+    border-radius: 110px;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    width: 7rem;
     height: 7rem;
 }
 
-.gallery-head {
-    border-color: rgb(96, 131, 148);
+#gallery-head__cont {
+    margin-bottom: 3.5rem;
 }
+
+.gallery-head, .team-head {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid var(--photo-past);
+    border-radius: 0;
+    background-color: none;
+}
+
+
+#gal-icon, #group-icon {
+    font-size: 4rem;
+    background-color: none;
+    color: var(--photo-past);
+}
+
+.gal-text, .team-text {
+    font-size: 2rem;
+    margin-top: .7rem;
+    color: rgb(84, 90, 100)
+}
+
 
 .flex-photo-cont, .flex-photo-cont-630 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 30rem;
-    padding: 1.5em;
-    /* background-color: var(--border-pastel-dark); */
+    height: 36rem;
+    padding-top: 0;
 }
 
 .flex-photo-cont-630 {display: none;}
-
-.back-pattern {
-    background-color: #A3B8CE;
-    opacity: 0.8;
-    background-size: 5px 5px;
-    background-image: repeating-linear-gradient(45deg, #48525d 0, #48525d 0.5px, #A3B8CE 0, #A3B8CE 50%);
-}
-
-/* .divider-line {
-    border-top: black 1px solid;
-    margin: 0 auto;
-} */
 
 .photos {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
     margin: 0 auto;
+}
+
+.photo-direct {
+    position: relative;
+    border: 10px solid rgb(255, 255, 255);
+    z-index: 10;
 }
 
 .photo-slider {
@@ -286,11 +359,9 @@ ul.main-nav > * {
 }
 
 button.arrow-left, button.arrow-right, button.arrow-right-630, button.arrow-left-630 {
-    /* position: absolute;
-    top: -17rem; */
     border: none;
     background: none;
-    z-index: 1;
+    z-index: 11;
     cursor: pointer;
 }
 
@@ -298,26 +369,39 @@ button.arrow-right-630, button.arrow-left-630 {
     display: none;
 }
 
-button.arrow-left {
-    padding-left: 1rem;
+.material-icons.text-center {
+    text-align: center;
 }
 
-.gallery-head {
-    display: inline-block;
-    padding: .5em 1em;
-    margin: 1em;
+.kidn-png-cont {
+    position: relative;
+    top: -26rem;
+    right: -8rem;
 }
 
-.material-icons.text-center {text-align: center;}
+.kidn-png {
+    width: 50rem;
+    transform: rotate(30deg);
+}
 
-/* article: [focus].......................... */
+
+/* [THE MAIN FOCUS].......................... */
+
+
+.divider {
+    position: relative;
+    top: -5rem;
+    height: 5rem;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%, rgba(243,243,243,1) 243%);
+}
 
 .promo-focus-cont {
     display: flex;
     justify-content: right;
     position: relative;
-    height: 35rem;
-    background-image: url(img/wall22.png);
+    height: 45rem;
+    background-image: url(img/wall22_2.png);
     background-size: cover;
 }
 
@@ -326,6 +410,7 @@ button.arrow-left {
     max-width: 30rem;
     color: white;
     background-color: unset;
+    border: none;
     border-color:  var(--marin-blue-og);
     margin-bottom: 6rem;
 }
@@ -335,14 +420,27 @@ button.arrow-left {
 .focus-txt-col {color: rgb(178, 240, 240);}
 
 
-/* article: [team]................................ */
+/* [TEAM]................................ */
 
-/* > 430 */
+
+#team-head__cont {
+    border: 1px solid var(--team-out);
+    margin-bottom: 6rem;
+}
+
+.team-text {
+    color: rgb(16, 81, 107)
+}
+
+#group-icon {
+    color: var(--team-grey);
+}
+
+
+/* > 630 */
 
 .team-head {
-    display: inline-block;
-    margin: 1em;
-    margin-bottom: 2.5em;
+    border-bottom: 1px solid var(--team-out);
 }
 
 .team-cont {
@@ -350,8 +448,8 @@ button.arrow-left {
     max-width: 50rem;
     margin: 0 auto;
     text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-top: 0;
+    margin-bottom: 7rem;
 }
 
 .team {
@@ -380,6 +478,8 @@ button.arrow-left {
     max-width: 125px;
     min-width: 100px;
     border-radius: 15px;
+    padding: .3rem;
+    outline: 1px solid var(--team-out);
 }
 
 .zar-person h3, .zar-person h4, .zar-person p {
@@ -391,7 +491,7 @@ button.arrow-left {
     text-align: justify;
 }
 
-/* < 430 */
+/* < 630 */
 
 .team-630 {display: none;}
 
@@ -399,6 +499,7 @@ button.arrow-left {
     display: flex;
     margin: 3em;
     margin-right: 1em;
+    margin-top: 0;
 }
 
 .person-description-630-cont {
@@ -411,7 +512,9 @@ button.arrow-left {
     margin: .5rem;
 }
 
-/* article: [ralialabiity]................... */
+
+/* [relialabiity]................... */
+
 
 .promo-reliability-cont {
     position: relative;
@@ -452,7 +555,9 @@ button.arrow-left {
     right: 0;
 }
 
-/* article: [contact]................... */
+
+/* [contact]................... */
+
 
 .contact-cont {
     margin-top: 10rem;
@@ -464,7 +569,7 @@ button.arrow-left {
     font-size: 2rem;
     font-weight: bold;
     margin: .7em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 }
 
 .contact-item-container {
@@ -517,7 +622,8 @@ button.arrow-left {
 
 .my-builder-logo {width: 160px;}
 
-/* footer.......................... */
+
+/* FOOTER......................... */
 
 footer {
     color: rgb(218, 218, 218);
@@ -525,23 +631,38 @@ footer {
     text-align: center;
 }
 
-/* pull back nav.................... */
+
+/* PULL BACK NAV.................... */
+
 
 .pull-back {
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
     display: inline-block;
-    background-color: var(--marin-blue);
-    padding: .1em;
-    border: white 1px solid;
-    border-radius: 5px;
-    z-index: 5;
-    box-shadow: 1px 1px 10px rgb(138, 138, 138);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 1rem;
+    z-index: 1000;
+    transition: opacity .4s;
+}
+
+.pull-back span {
+    font-size: 3rem;
+    transform: rotate(90deg);
+    color: var(--marin-blue);
+    transition: color .4s;
+}
+
+.opa-1 {
+    opacity: 1;
+}
+
+.opa-0 {
+    opacity: 0;
 }
 
 
-/* media Q................ */
+/* MEDIA Q.................. */
+/* ......................... */
 
 /* 1500 */
 
@@ -550,10 +671,16 @@ footer {
         font-size: 2.2rem;
     }
 
-    .promo-reliability {font-size: 2rem;}
+    .promo-reliability {
+        font-size: 2rem;
+    }
 
     .promo-offer-head, .gallery-head, .team-head {
         font-size: 1.8rem;
+    }
+
+    .promo-focus {
+        margin-right: 10rem;
     }
 
     .menu-item {
@@ -572,7 +699,7 @@ footer {
 /* 1065 */
 
 @media only screen and (max-width: 1065px) {
-    .promo-quality, .promo-focus {
+    .promo-quality {
         font-size: 2rem;
     }
 
@@ -602,8 +729,12 @@ footer {
 
     .flex-focus {width: 70%;}
 
-    .promo-quality, .promo-focus {
+    .promo-quality {
         font-size: 1.8rem;
+    }
+
+    .promo-focus {
+        margin-right: 3.5rem;
     }
 }
 
@@ -626,6 +757,16 @@ footer {
     }
 }
 
+/* 830 */
+
+@media only screen and (max-width: 830px) {
+
+    .flex-focus {
+        margin-right: 0;
+    }
+
+}
+
 /* 700 */
 
 @media only screen and (max-width: 700px) {
@@ -646,6 +787,7 @@ footer {
         width: 50%;
         height: 40%;
         margin: 0;
+        margin-right: 2rem;
     }
 
     .promo-offer-menu, .promo-offer-head, .menu-item {
@@ -681,6 +823,7 @@ footer {
 
     .promo-focus {
         width: 60%;
+        margin-right: 0;
     }
 
     .zar-person {
@@ -695,6 +838,10 @@ footer {
 
     .contact-item {width: 50%;}
 
+    /* .promo-offer-cont {
+        background-image: url(img/wall_2.png);
+    } */
+
 }
 
 /* 630 */
@@ -705,6 +852,10 @@ footer {
     .team-630 {display: block;}
 
     .promo-quality, .promo-focus {width: 80%;}
+
+    .promo-focus {
+        font-size: 2rem;
+    }
 
     .photos {width: 100%;}
     .arrow-right, .arrow-left {display: none;}
@@ -772,10 +923,23 @@ footer {
 
     .menu-item {font-size: 1.1rem;}
 
-    .promo-quality, .promo-focus {
+    .promo-quality {
         font-size: 1.5rem;
     }
-
+  
+    #gallery-head__cont, #team-head__cont {
+        width: 6rem;
+        height: 6rem;
+    }    
+     
+    #gal-icon, #group-icon {
+        font-size: 3rem;
+    }
+    
+    .gal-text, .team-text {
+        font-size: 1.7rem;
+    }
+  
 }
 
 /* 450 */
@@ -791,8 +955,8 @@ footer {
         text-align: right;
         right: 0;
         width: 100%;
-        background: rgb(255,255,255);
-        background: linear-gradient(21deg, rgba(255,255,255,0) 34%, rgba(0,103,168,1) 100%, rgba(243,243,243,1) 243%);
+        background: rgba(24, 69, 136, 0.13);
+
         margin-right: .5em;
         margin-left: .5em;
 
@@ -812,7 +976,7 @@ footer {
     }
 
     .main-nav a {
-        color: rgb(205, 210, 219);
+        color: rgb(228, 233, 241);
         text-shadow: 1px 1px 4px black;
         opacity: 0;
     }
@@ -842,8 +1006,17 @@ footer {
 /* 430 */
 
 @media only screen and (max-width: 430px) {
+
     .promo-offer-cont {
         border: var(--border-pastel) 1rem solid;}
+
+    .promo-quality-cont {
+        margin-left: 1rem;
+    }
+
+    .promo-quality {
+        margin-right: 1rem;
+    }
 }
 
 /* 400 */
@@ -876,8 +1049,12 @@ footer {
         font-size: 36px;
     }
 
-    .promo-quality, .promo-focus {
+    .promo-quality {
         font-size: 1.3rem;
+    }
+
+    .promo-focus {
+        font-size: 1.7rem;
     }
 
     .promo-reliability {
